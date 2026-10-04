@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Café | Experiencia Artesanal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado y Navegación -->
+  <header class="navbar">
+    <div class="logo">Aroma Café ☕</div>
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <nav id="navMenu">
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#carrito-section">Carrito (<span id="cartCount">0</span>)</a></li>
+        <li><button id="themeToggle" class="btn-theme">🌙 Modo Oscuro</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Banner Principal -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <span class="tagline">Cafetería & Bakery</span>
+        <h1>El sabor de lo artesanal</h1>
+        <p>Granos seleccionados de origen, tostados a la perfección y repostería fresca cada mañana.</p>
+        <a href="#menu" class="btn btn-primary">Ver Menú</a>
+      </div>
+    </section>
+
+    <!-- Menú de Productos con atributos data- (Requisito DW2) -->
+    <section id="menu" class="menu-section">
+      <div class="section-header">
+        <h2>Nuestras Especialidades</h2>
+        <p>Selecciona tus productos favoritos para agregarlos al carrito de compras</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Producto 1 -->
+        <article class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" alt="Espresso Especial">
+            <span class="badge">Popular</span>
+          </div>
+          <div class="card-body">
+            <h3>Espresso Especial</h3>
+            <p>Grano 100% arábigo con notas intensas de chocolate amargo.</p>
+            <div class="card-footer">
+              <span class="price">$3.50</span>
+              <button class="btn-add-cart" data-id="1" data-nombre="Espresso Especial" data-precio="3.50">
+                Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=500&q=80" alt="Cappuccino Vainilla">
+          </div>
+          <div class="card-body">
+            <h3>Cappuccino Vainilla</h3>
+            <p>Espresso cargado, leche cremada y esencia natural de vainilla.</p>
+            <div class="card-footer">
+              <span class="price">$4.20</span>
+              <button class="btn-add-cart" data-id="2" data-nombre="Cappuccino Vainilla" data-precio="4.20">
+                Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80" alt="Croissant Artesanal">
+            <span class="badge">Recién Horneado</span>
+          </div>
+          <div class="card-body">
+            <h3>Croissant Artesanal</h3>
+            <p>Masa hojaldrada crujiente horneada con mantequilla pura.</p>
+            <div class="card-footer">
+              <span class="price">$2.80</span>
+              <button class="btn-add-cart" data-id="3" data-nombre="Croissant Artesanal" data-precio="2.80">
+                Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="card">
+          <div class="card-img-container">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80" alt="Iced Caramel Latte">
+          </div>
+          <div class="card-body">
+            <h3>Iced Caramel Latte</h3>
+            <p>Café frío, leche a elección, hielo y salsa de caramelo artesanal.</p>
+            <div class="card-footer">
+              <span class="price">$4.80</span>
+              <button class="btn-add-cart" data-id="4" data-nombre="Iced Caramel Latte" data-precio="4.80">
+                Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Módulo de Carrito de Compras -->
+    <section id="carrito-section" class="carrito-section">
+      <div class="carrito-card">
+        <h2>🛒 Tu Carrito de Compras</h2>
+        
+        <div id="carritoContenedor" class="carrito-lista">
+          <p class="carrito-vacio-msg">El carrito está vacío.</p>
+        </div>
+
+        <div class="carrito-resumen">
+          <h3>Total a Pagar: $<span id="totalPagar">0.00</span></h3>
+          <button id="btnVaciarCarrito" class="btn btn-danger">Vaciar Carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aroma Café. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Vinculación del script del taller -->
+  <script src="js/app.js"></script>
+</body>
+</html>
