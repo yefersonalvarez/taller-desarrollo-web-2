@@ -131,6 +131,37 @@
       </div>
     </section>
   </main>
+  <!-- === SECCIÓN DE REGISTRO DE CLIENTES === -->
+<section id="registroSeccion" class="registro-container">
+    <div class="registro-card">
+        <h2>👤 Registro de Clientes</h2>
+        <form id="registroForm">
+            <div class="form-group">
+                <label for="nombreCliente">Nombre completo:</label>
+                <input type="text" id="nombreCliente" placeholder="Ej: Juan Pérez" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="correoCliente">Correo electrónico:</label>
+                <input type="email" id="correoCliente" placeholder="ejemplo@correo.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefonoCliente">Teléfono / Celular:</label>
+                <input type="tel" id="telefonoCliente" placeholder="300 000 0000" required>
+            </div>
+
+            <button type="submit" class="btn-registro">Registrar Cliente</button>
+        </form>
+
+        <div id="mensajeRegistro" class="mensaje-registro"></div>
+
+        <div class="lista-registrados">
+            <h3>📋 Clientes Registrados</h3>
+            <ul id="listaClientes" class="lista-clientes"></ul>
+        </div>
+    </div>
+</section>
 
   <footer>
     <p>&copy; 2026 Aroma Café. Todos los derechos reservados.</p>

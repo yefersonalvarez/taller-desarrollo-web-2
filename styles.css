@@ -294,4 +294,182 @@ footer {
     width: 100%;
     padding: 1rem 0;
   }
+  /* === ESTILOS PARA REGISTRO DE CLIENTES === */
+.registro-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bg-card, #ffffff);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-registro {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-registro:hover {
+    background-color: #218838;
+}
+
+.mensaje-registro {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.mensaje-registro.exito {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.lista-clientes {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.lista-clientes li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+}
+/* === ESTILOS PARA REGISTRO DE CLIENTES (AROMA CAFÉ) === */
+.registro-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.registro-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+}
+
+.registro-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #2b1704;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #4a3b32;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #c0392b;
+}
+
+.btn-registro {
+    width: 100%;
+    padding: 12px;
+    background-color: #c0392b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-registro:hover {
+    background-color: #a93226;
+}
+
+.mensaje-registro {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+    display: none;
+}
+
+.mensaje-registro.exito {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.lista-registrados {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.lista-registrados h3 {
+    font-size: 1.1rem;
+    color: #2b1704;
+    margin-bottom: 10px;
+}
+
+.lista-clientes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-clientes li {
+    padding: 8px 10px;
+    background-color: #fcf8f5;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    color: #333;
+    border-left: 3px solid #c0392b;
 }
