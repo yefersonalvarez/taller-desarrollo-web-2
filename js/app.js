@@ -103,4 +103,60 @@ document.addEventListener('DOMContentLoaded', () => {
     carrito = [];
     renderizarCarrito();
   });
-});
+// --- 4. MÓDULO DE REGISTRO DE CLIENTES (PRAI 2) ---
+    const registroForm = document.getElementById('registroForm');
+    const nombreCliente = document.getElementById('nombreCliente');
+    const correoCliente = document.getElementById('correoCliente');
+    const telefonoCliente = document.getElementById('telefonoCliente');
+    const mensajeRegistro = document.getElementById('mensajeRegistro');
+    const listaClientes = document.getElementById('listaClientes');
+
+    // Cargar clientes guardados en localStorage
+    let clientes = JSON.parse(localStorage.getItem('clientesRegistrados')) || [];
+
+    function renderizarClientes() {
+        if (!listaClientes) return;
+        listaClientes.innerHTML = '';
+        if (clientes.length === 0) {
+            listaClientes.innerHTML = '<li>No hay clientes registrados aún.</li>';
+            return;
+        }
+        clientes.forEach((cliente, index) => {
+            const li = document.createElement('li');
+            li.textContent = `${index + 1}. ${cliente.nombre} - ${cliente.correo} (${cliente.telefono})`;
+            listaClientes.appendChild(li);
+        });
+    }
+
+    if (registroForm) {
+        registroForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nuevoCliente = {
+                nombre: nombreCliente.value.trim(),
+                correo: correoCliente.value.trim(),
+                telefono: telefonoCliente.value.trim(),
+                fecha: new Date().toLocaleDateString()
+            };
+
+            clientes.push(nuevoCliente);
+            localStorage.setItem('clientesRegistrados', JSON.stringify(clientes));
+
+            if (mensajeRegistro) {
+                mensajeRegistro.textContent = `¡Cliente ${nuevoCliente.nombre} registrado con éxito!`;
+                mensajeRegistro.className = 'mensaje-registro exito';
+                mensajeRegistro.style.display = 'block';
+
+                setTimeout(() => {
+                    mensajeRegistro.style.display = 'none';
+                }, 3000);
+            }
+
+            registroForm.reset();
+            renderizarClientes();
+        });
+    }
+
+    // Renderizar clientes al cargar la página
+    renderizarClientes();
+  });
